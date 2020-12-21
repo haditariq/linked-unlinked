@@ -1,3 +1,5 @@
+const getUnlinked = require( './linked.js');
+
 const allUsers = [
     {
         id: 100,
@@ -47,3 +49,7 @@ const linked = [
         name: "Mueez Ali"
     },
 ]
+
+
+const unlinked = getUnlinked(allUsers, linked);
+console.log("Unlinked users are: %s", unlinked.map(item => item.name))
